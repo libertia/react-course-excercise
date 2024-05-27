@@ -7,6 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {/* Insert Hello component Here */}
+
+        {/* Make this components */}
         <div>
           <div className="board-row">
             <button className="square">1</button>
