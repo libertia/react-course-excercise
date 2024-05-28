@@ -1,31 +1,33 @@
-import Square from "../components/ex2/Square"
+import NameSearch from "../components/ans/NameSearch"
+import Square from "../components/ans/Square"
 
 
-function ComponentExcercise() {
+function StateExcercise () {
   return (
     <>
-      {/* Insert Hello component Here */}
 
-      {/* Make this components */}
+    {/* TODO: Refactor this using map */}
       <div>
         <div className="board-row">
-          <Square value={1} />
-          <Square value={2} />
-          <Square value={3} />
+          <Square />
+          <Square />
+          <Square />
         </div>
         <div className="board-row">
-          <Square value={4} />
-          <Square value={5} />
-          <Square value={6} />
+          <Square />
+          <Square />
+          <Square />
         </div>
         <div className="board-row">
-          <Square value={7} />
-          <Square value={8} />
-          <Square value={9} />
+          <Square />
+          <Square />
+          <Square />
         </div>
       </div>
+
+      <div><NameSearch/></div>
     </>
   )
 }
 
-export default ComponentExcercise
+export default StateExcercise 
