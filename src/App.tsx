@@ -1,15 +1,23 @@
 import './App.css';
-// import ComponentExcercise from './pages/excercise';
-import StateExcercise from './pages/excercise2';
+import AppRouter from './router';
 
 function App() {
+  //   return (
+  //     <div className="App">
+  //       <header className="App-header">
+  //         <StateExcercise />
+  //       </header>
+  //     </div>
+  //   );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <StateExcercise />
-      </header>
-    </div>
-  );
+    <>
+      <AppRouter />
+    </>
+  )
 }
+
+
+
 
 export default App;
