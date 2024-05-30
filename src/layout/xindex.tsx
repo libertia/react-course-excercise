@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (<>
@@ -17,7 +17,7 @@ const Layout = () => {
     </nav>
     <div className="App">
       <header className="App-header">
-        {/* Display router content here */}
+        <Outlet/>
       </header>
     </div>
 
