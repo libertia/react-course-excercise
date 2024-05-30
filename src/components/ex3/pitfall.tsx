@@ -5,7 +5,7 @@ export default function PitfallState() {
   const handleAlertClick = () => {
     setTimeout(() => {
       setCount(count + 1);
-    }, 3000);
+    }, 1000);
   };
   return (
     <div>
