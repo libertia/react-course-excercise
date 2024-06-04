@@ -13,11 +13,14 @@ const Layout = () => {
         <li>
           <Link to="/state2">Excercise3</Link>
         </li>
+        <li>
+          <Link to="/hook">Excercise4</Link>
+        </li>
       </ul>
     </nav>
     <div className="App">
       <header className="App-header">
-        <Outlet/>
+        <Outlet />
       </header>
     </div>
 
