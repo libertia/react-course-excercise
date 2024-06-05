@@ -1,12 +1,12 @@
 import { useEffect } from "react"
-import { destroyed, init } from "./libs/rainbowLib"
+import {  init } from "./libs/rainbowLib"
 
 const Hook1 = () => {
 
   useEffect(()=> {
     console.log("start rainbow")
     init('rainbow')
-
+    //call this function when unmount destroyed()
   },[])
 
   return <div>

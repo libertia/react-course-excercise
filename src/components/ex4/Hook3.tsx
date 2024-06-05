@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react"
 
 const Hook3 = () => {
   const focusInput = () => {
