@@ -1,7 +1,7 @@
 import { useEffect } from "react"
-import { destroyed, init } from "./rainbowLib"
+import { destroyed, init } from "./libs/rainbowLib"
 
-const EffectCleanup = () => {
+const Hook1 = () => {
 
   useEffect(()=> {
     console.log("start rainbow")
@@ -14,4 +14,4 @@ const EffectCleanup = () => {
   </div>
 }
 
-export default EffectCleanup
+export default Hook1

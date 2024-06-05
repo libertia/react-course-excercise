@@ -65,3 +65,4 @@ function updateColor(count: number) {
   ctx.fillStyle = grd;
   ctx.fillRect(10, 10, 150, 80);
 }
+
