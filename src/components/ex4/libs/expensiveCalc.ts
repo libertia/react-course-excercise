@@ -1,4 +1,9 @@
 
+/**
+ * Very expensive calculation
+ * @param num starting number
+ * @returns 
+ */
 export const expensiveCalculation = (num:number) => {
   console.log("Calculating...");
   for (let i = 0; i < 1000000000; i++) {

@@ -1,5 +1,5 @@
 import Hook1 from "../components/ex4/hook1"
-import Hook3 from "../components/ex4/hook3"
+import Hook3 from "../components/ans/hook3"
 import Hook2 from "../components/ex4/hook2"
 
 

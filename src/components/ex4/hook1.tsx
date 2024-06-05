@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import {  init } from "./libs/rainbowLib"
+import {  init, togglePause } from "./libs/rainbowLib"
 
 const Hook1 = () => {
 
@@ -10,7 +10,9 @@ const Hook1 = () => {
   },[])
 
   return <div>
+    <h2>Rainbow</h2>
     <div id="rainbow"></div>
+    <button onClick={togglePause}>Pause</button>
   </div>
 }
 

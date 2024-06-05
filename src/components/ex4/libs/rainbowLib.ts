@@ -16,6 +16,11 @@ const backGrounds = [
   "black",
 ]
 
+/**
+ * Initialize rainbow code
+ * @param elementId id of element to attach rainbow 
+ * @returns 
+ */
 export function init(elementId: string) {
   console.log("init", !!activeElement, !!interval)
   if (activeElement || interval) { return new Error("Unable to init libary. Reason: Another constant of this libary is currently active.") }
@@ -39,10 +44,16 @@ export function init(elementId: string) {
   }, 500,);
 }
 
+/**
+ * Pause rainbow effect
+ */
 export function togglePause() {
   isPaused = !isPaused
 }
 
+/**
+ * call when rainbow is not use anymore
+ */
 export function destroyed() {
   console.log("destroy rainbow")
   activeElement = null
