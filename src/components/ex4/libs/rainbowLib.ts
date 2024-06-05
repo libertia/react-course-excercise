@@ -18,15 +18,19 @@ const backGrounds = [
 
 /**
  * Initialize rainbow code
- * @param elementId id of element to attach rainbow 
+ * @param element element to attach rainbow 
  * @returns 
  */
-export function init(elementId: string) {
-  console.log("init", !!activeElement, !!interval)
-  if (activeElement || interval) { return new Error("Unable to init libary. Reason: Another constant of this libary is currently active.") }
+export function init(element: HTMLElement) {
+  // console.log("init", !!activeElement, !!interval)
+  if (activeElement || interval) {
+    throw new Error("Unable to init libary. Reason: Another constant of this libary is currently active.")
+  }
 
-  activeElement = document.getElementById(elementId)
-  if (activeElement === null) { return new Error("Unable to init libary. Reason: Cannot found element with id " + elementId + ".") }
+  activeElement = element
+  if (activeElement === null) {
+    throw new Error("Unable to init libary. Reason: Cannot found element with id " + element + ".")
+  }
   //create canvas element
   canvasElement = document.createElement('canvas')
   activeElement!.appendChild(canvasElement)

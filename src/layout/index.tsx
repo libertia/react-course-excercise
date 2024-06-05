@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (<>
@@ -16,11 +16,14 @@ const Layout = () => {
         <li>
           <Link to="/hook">Excercise4</Link>
         </li>
+        <li>
+          <Link to="/context">Excercise5</Link>
+        </li>
       </ul>
     </nav>
     <div className="App">
       <header className="App-header">
-        {/* Display router content here */}
+        <Outlet />
       </header>
     </div>
 

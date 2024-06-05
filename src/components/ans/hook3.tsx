@@ -3,7 +3,10 @@ import { useRef } from "react";
 const Hook3 = () => {
   const inputE = useRef<HTMLInputElement>(null)
   const focusInput = () => {
-    inputE?.current?.focus()
+    if(!inputE.current) return
+    
+    inputE.current.focus()
+    inputE.current!.style.backgroundColor = "red"
   };
   return (
     <div>
