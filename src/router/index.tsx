@@ -5,6 +5,8 @@ import StateExcercise from "../pages/excercise2"
 import StateExcercisePitfall from "../pages/excercise3"
 import HookExcercise from "../pages/excercise4"
 import Excercise5 from "../pages/excercise5"
+import Excercise7 from "../pages/excercise7"
+import Excercise6 from "../pages/excercise6"
 
 const AppRouter = () => {
   return (
@@ -17,6 +19,8 @@ const AppRouter = () => {
           <Route path="state2" element={<StateExcercisePitfall />} />
           <Route path="hook" element={<HookExcercise />} />
           <Route path="context" element={<Excercise5 />} />
+          <Route path="redux" element={<Excercise6 />} />
+          <Route path="e7" element={<Excercise7 />} />
           <Route path="*" element={<div>Page not found</div>} />
         </Route>
       </Routes>

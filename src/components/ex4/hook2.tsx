@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { expensiveCalculation } from "./libs/expensiveCalc";
 
 
@@ -7,7 +7,10 @@ const Hook2 = () => {
   const [todos, setTodos] = useState<any[]>([]);
 
 
-  const calculation = () => expensiveCalculation(count)
+  // const calculation = useMemo(() => { return expensiveCalculation(count) }, [count])
+
+
+  const calculation = useMemo(() => expensiveCalculation(count), [count])
 
   const increment = () => {
     setCount((c) => c + 1);
@@ -33,7 +36,7 @@ const Hook2 = () => {
 
         <button onClick={increment}>+</button>
         <h2>Expensive Calculation</h2>
-        {calculation()}
+        {calculation}
       </div>
     </div>
   );
