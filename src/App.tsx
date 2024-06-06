@@ -1,6 +1,7 @@
 import './App.css';
 import AppRouter from './router';
-
+import store from './stores'
+import { Provider } from 'react-redux'
 function App() {
   //   return (
   //     <div className="App">
@@ -12,7 +13,9 @@ function App() {
 
   return (
     <>
-      <AppRouter />
+      <Provider store={store}>
+        <AppRouter />
+      </Provider>
     </>
   )
 }
