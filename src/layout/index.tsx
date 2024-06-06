@@ -19,6 +19,12 @@ const Layout = () => {
         <li>
           <Link to="/context">Excercise5</Link>
         </li>
+        <li>
+          <Link to="/redux">Excercise6</Link>
+        </li>
+        <li>
+          <Link to="/e7">Excercise7</Link>
+        </li>
       </ul>
     </nav>
     <div className="App">

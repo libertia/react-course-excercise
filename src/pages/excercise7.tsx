@@ -1,13 +1,11 @@
-
-
+import { useEffect, useState } from "react"
 
 // fetch data from https://666014725425580055b20ff8.mockapi.io/api/user
 
-import { useEffect, useState } from "react"
-import { GeneratedIdentifierFlags } from "typescript"
 
 // using redux async trunk
 const Excercise7 = () => {
+
   const [userList, setUserList] = useState<any[]>([])
   useEffect(() => {
     //TODO move this code to redux
