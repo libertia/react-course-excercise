@@ -1,8 +1,10 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit'
 import counter from './counter'
+import ex7Slice from './excercise7';
 
 const reducer = combineReducers({
-  counter
+  counter,
+  ex7Slice
 });
 
 export const store = configureStore({

@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { ex7Slice, fetchUserList, userListSelector } from "../stores/excercise7"
+import { AppDispatch } from "../stores"
 
 // fetch data from https://666014725425580055b20ff8.mockapi.io/api/user
 
 
 // using redux async trunk
 const Excercise7 = () => {
-
-  const [userList, setUserList] = useState<any[]>([])
+  // const [userList, setUserList] = useState<any[]>([])
+  const userList = useSelector(userListSelector.list); //userList is now come directly from slicer
+  const dispatch = useDispatch<AppDispatch>();
+  
   useEffect(() => {
-    //TODO move this code to redux
-    getData().then((resp) => {
-      console.log(resp)
-      setUserList(resp)
-    })
+    //dispach getData for redux slicer to fetch user List
+    dispatch(fetchUserList())
   }, [])
   return (
     <>
@@ -41,9 +43,11 @@ const Excercise7 = () => {
   )
 }
 
-async function getData() {
-  const response = await fetch("https://666014725425580055b20ff8.mockapi.io/api/user");
-  return await response.json();
-}
+
+// async function getData() {
+//   const response = await fetch("https://666014725425580055b20ff8.mockapi.io/api/user");
+//   return await response.json();
+// }
+
 
 export default Excercise7
