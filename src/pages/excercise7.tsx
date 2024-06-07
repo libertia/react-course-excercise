@@ -15,13 +15,13 @@ const Excercise7 = () => {
   useEffect(() => {
     //dispach getData for redux slicer to fetch user List
     dispatch(fetchUserList())
-  }, [])
+  }, [dispatch])
   return (
     <>
       <div style={{ display: 'grid', gridTemplateColumns: 'auto auto auto', padding: '10px', }}>
         {userList.map((x: any, index: number) => {
           return (
-            <div >
+            <div key={index}>
               <div style={{ display: 'flex', flexWrap: 'nowrap', padding: '4px', margin: '4px', backgroundColor: '#626c80' }}>
                 <div>
                   <img src={x.avatar} alt="user avatar" key={index} />
